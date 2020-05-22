@@ -1,3 +1,34 @@
-h1 {
+html {
+    font-size: 62.5%;
+}
+
+body, h1, h2, h3, h4, p, a, li, ul, button {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1480px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
     font-family: $accentFont;
+}
+
+p, a, li {
+    font-family: $contentFont;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fatText {
+    font-weight: 700;
 }

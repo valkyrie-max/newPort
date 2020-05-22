@@ -1,0 +1,80 @@
+header {
+    min-height: 100vh;
+    // max-height: 100vh;
+    background-color: $backgroundColor;
+    border: 20px solid $firstContentColor;
+    position: relative;
+    h1, h2{
+        text-transform: uppercase;
+        color: $firstContentColor;
+    }
+    h1 {
+        font-size: 28rem;
+        text-align: right;
+        text-shadow: 15px 0px $secondLightAccentContentColor;
+    }
+    p {
+        font-size: 5rem;
+        color: $secondContentColor;
+    }
+
+    .intro {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 12%;
+        top: 12%;
+        transform: rotate(-10deg);
+        .upperText {
+            p {
+                text-align: right;
+                margin-bottom: 5px;
+            }
+        }
+        .lowerText {
+            text-align: right;
+            h2 {
+                font-size: 12rem;
+                // text-align: right;
+                span {
+                    width: 100%;
+                    text-align: right;
+                    display: table;
+                }
+            }
+            p {
+                margin-bottom: 10px;
+                text-align: right;
+            }
+        }
+    }
+    nav {
+        transform: rotate(10deg);
+        position: absolute;
+        right: 15%;
+        top: 16%;
+        ul {
+            text-align: right;
+            li {
+                color: $firstLightAccentContentColor;
+                font-size: 5rem;
+                margin-bottom: 50px;
+                a {
+                    color: $firstLightAccentContentColor;
+                    border-bottom: 5px solid $firstContentColor;
+                    padding-bottom: 0;
+                    transition: 0.35s all ease;
+                }
+                a:hover, a:focus {
+                    padding-bottom: 10px;
+                    font-size: 7rem;
+                    border-bottom: 15px solid $secondLightAccentContentColor;
+                }
+                a:active {
+                    color: $secondLightAccentContentColor;
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+}

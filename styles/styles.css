@@ -235,6 +235,136 @@ html {
   overflow: hidden;
 }
 
-h1 {
-  font-family: "Chelsea Market", cursive;
+html {
+  font-size: 62.5%;
+}
+
+body, h1, h2, h3, h4, p, a, li, ul, button {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1480px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: "Freckle Face", cursive;
+}
+
+p, a, li {
+  font-family: "Space Mono", monospace;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fatText {
+  font-weight: 700;
+}
+
+header {
+  min-height: 100vh;
+  background-color: #FAD30A;
+  border: 20px solid #480F7C;
+  position: relative;
+}
+
+header h1, header h2 {
+  text-transform: uppercase;
+  color: #480F7C;
+}
+
+header h1 {
+  font-size: 28rem;
+  text-align: right;
+  text-shadow: 15px 0px #C73F75;
+}
+
+header p {
+  font-size: 5rem;
+  color: #B71154;
+}
+
+header .intro {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 12%;
+  top: 12%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+header .intro .upperText p {
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+header .intro .lowerText {
+  text-align: right;
+}
+
+header .intro .lowerText h2 {
+  font-size: 12rem;
+}
+
+header .intro .lowerText h2 span {
+  width: 100%;
+  text-align: right;
+  display: table;
+}
+
+header .intro .lowerText p {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+header nav {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  position: absolute;
+  right: 15%;
+  top: 16%;
+}
+
+header nav ul {
+  text-align: right;
+}
+
+header nav ul li {
+  color: #6D4190;
+  font-size: 5rem;
+  margin-bottom: 50px;
+}
+
+header nav ul li a {
+  color: #6D4190;
+  border-bottom: 5px solid #480F7C;
+  padding-bottom: 0;
+  -webkit-transition: 0.35s all ease;
+  transition: 0.35s all ease;
+}
+
+header nav ul li a:hover, header nav ul li a:focus {
+  padding-bottom: 10px;
+  font-size: 7rem;
+  border-bottom: 15px solid #C73F75;
+}
+
+header nav ul li a:active {
+  color: #C73F75;
+  padding-bottom: 0px;
 }
