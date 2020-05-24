@@ -1,78 +1,104 @@
 header {
     min-height: 100vh;
-    // max-height: 100vh;
-    background-color: $backgroundColor;
-    border: 20px solid $firstContentColor;
+    padding-top: 60px;
     position: relative;
-    h1, h2{
-        text-transform: uppercase;
-        color: $firstContentColor;
-    }
-    h1 {
-        font-size: 28rem;
-        text-align: right;
-        text-shadow: 15px 0px $secondLightAccentContentColor;
-    }
-    p {
-        font-size: 5rem;
-        color: $secondContentColor;
-    }
-
-    .intro {
+    background: url('../assets/background.png') scroll no-repeat $backgroundColor 240% 25%;
+    .headerContent {
         position: absolute;
-        display: flex;
-        flex-direction: column;
-        left: 12%;
-        top: 12%;
-        transform: rotate(-10deg);
-        .upperText {
-            p {
-                text-align: right;
-                margin-bottom: 5px;
+        right: 10%;
+        .intro {
+            h1 {
+                text-transform: uppercase;
+                color: $secondContentColor;
+                font-size: 14rem;
+                letter-spacing: 5px;
+                text-shadow: 10px 0px $firstContentColor;
             }
-        }
-        .lowerText {
-            text-align: right;
             h2 {
-                font-size: 12rem;
-                // text-align: right;
+                text-transform: lowercase;
+                font-size: 8.5rem;
+                letter-spacing: 5px;
+                color: $secondLightAccentContentColor;
+                text-shadow: 8px 0px $firstLightAccentContentColor;
                 span {
                     width: 100%;
-                    text-align: right;
                     display: table;
                 }
             }
             p {
-                margin-bottom: 10px;
-                text-align: right;
+                font-size: 4.5rem;
+                text-transform: lowercase;
+                color: $firstContentColor;
+            }
+            .lowerText {
+                margin-top: 20px;
             }
         }
-    }
-    nav {
-        transform: rotate(10deg);
-        position: absolute;
-        right: 15%;
-        top: 16%;
-        ul {
-            text-align: right;
-            li {
-                color: $firstLightAccentContentColor;
-                font-size: 5rem;
-                margin-bottom: 50px;
-                a {
-                    color: $firstLightAccentContentColor;
-                    border-bottom: 5px solid $firstContentColor;
-                    padding-bottom: 0;
-                    transition: 0.35s all ease;
+        nav {
+            margin-top: 20px;
+            ul {
+                li {
+                    font-size: 2.5rem;
+                    line-height: 2;
+                    text-transform: uppercase;
+                    a {
+                        color: $firstContentColor;
+                        text-shadow: 0px 0px transparent;
+                        transition: 0.3s all ease;
+                    }
+                    i {
+                        margin-right: 5px;
+                        rotate: 30deg;
+                        transition: 0.3s all ease;
+                    }
+                    a:hover, a:focus {
+                        font-size: 3rem;
+                        text-shadow: 3px 0px $thirdAccentColor;
+                        i {
+                            rotate: 100deg;
+                        }
+                    }
+                    a:active {
+                        color: $firstLightAccentContentColor;
+                        text-shadow: 2px 0px $thirdAccentColor;
+                    }
                 }
-                a:hover, a:focus {
-                    padding-bottom: 10px;
-                    font-size: 7rem;
-                    border-bottom: 15px solid $secondLightAccentContentColor;
+            }
+        }
+        .toContent {
+            margin-top: 25px;
+            p {
+                font-size: 3rem;
+                font-family: $accentFont;
+                transition: 0.3s all ease;
+                text-transform: uppercase;
+            }
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0px);
                 }
-                a:active {
-                    color: $secondLightAccentContentColor;
-                    padding-bottom: 0px;
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-2px);
+                }
+            }
+            .bounce {
+                animation: bounce 2s infinite;
+            }
+            a {
+                color: $firstContentColor;
+                text-shadow: 2px 0px $thirdAccentColor;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: 0.3s ease all;
+            }
+            a:hover {
+                p {
+                    font-size: 3.5rem;
+                    text-shadow: 4px 0px $thirdAccentColor;
                 }
             }
         }

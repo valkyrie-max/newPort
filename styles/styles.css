@@ -250,12 +250,12 @@ body, h1, h2, h3, h4, p, a, li, ul, button {
   margin: 0 auto;
 }
 
-h1, h2, h3 {
-  font-family: "Freckle Face", cursive;
+h1, h2, h3, a {
+  font-family: "Chelsea Market", cursive;
 }
 
-p, a, li {
-  font-family: "Space Mono", monospace;
+p {
+  font-family: "Montserrat", sans-serif;
 }
 
 li {
@@ -272,29 +272,135 @@ a {
 
 header {
   min-height: 100vh;
-  background-color: #FAD30A;
-  border: 20px solid #480F7C;
+  padding-top: 60px;
   position: relative;
+  background: url("../assets/background.png") scroll no-repeat #FAD30A 240% 25%;
 }
 
-header h1, header h2 {
+header .headerContent {
+  position: absolute;
+  right: 10%;
+}
+
+header .headerContent .intro h1 {
   text-transform: uppercase;
+  color: #B71154;
+  font-size: 14rem;
+  letter-spacing: 5px;
+  text-shadow: 10px 0px #480F7C;
+}
+
+header .headerContent .intro h2 {
+  text-transform: lowercase;
+  font-size: 8.5rem;
+  letter-spacing: 5px;
+  color: #C73F75;
+  text-shadow: 8px 0px #6D4190;
+}
+
+header .headerContent .intro h2 span {
+  width: 100%;
+  display: table;
+}
+
+header .headerContent .intro p {
+  font-size: 4.5rem;
+  text-transform: lowercase;
   color: #480F7C;
 }
 
-header h1 {
-  font-size: 28rem;
-  text-align: right;
-  text-shadow: 15px 0px #C73F75;
+header .headerContent .intro .lowerText {
+  margin-top: 20px;
 }
 
-header p {
-  font-size: 5rem;
-  color: #B71154;
+header .headerContent nav {
+  margin-top: 20px;
 }
 
-header .intro {
-  position: absolute;
+header .headerContent nav ul li {
+  font-size: 2.5rem;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+header .headerContent nav ul li a {
+  color: #480F7C;
+  text-shadow: 0px 0px transparent;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+header .headerContent nav ul li i {
+  margin-right: 5px;
+  rotate: 30deg;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+header .headerContent nav ul li a:hover, header .headerContent nav ul li a:focus {
+  font-size: 3rem;
+  text-shadow: 3px 0px #01ed6e;
+}
+
+header .headerContent nav ul li a:hover i, header .headerContent nav ul li a:focus i {
+  rotate: 100deg;
+}
+
+header .headerContent nav ul li a:active {
+  color: #6D4190;
+  text-shadow: 2px 0px #01ed6e;
+}
+
+header .headerContent .toContent {
+  margin-top: 25px;
+}
+
+header .headerContent .toContent p {
+  font-size: 3rem;
+  font-family: "Chelsea Market", cursive;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+
+header .headerContent .toContent .bounce {
+  -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+}
+
+header .headerContent .toContent a {
+  color: #480F7C;
+  text-shadow: 2px 0px #01ed6e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,69 +408,14 @@ header .intro {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  left: 12%;
-  top: 12%;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
-header .intro .upperText p {
-  text-align: right;
-  margin-bottom: 5px;
-}
-
-header .intro .lowerText {
-  text-align: right;
-}
-
-header .intro .lowerText h2 {
-  font-size: 12rem;
-}
-
-header .intro .lowerText h2 span {
-  width: 100%;
-  text-align: right;
-  display: table;
-}
-
-header .intro .lowerText p {
-  margin-bottom: 10px;
-  text-align: right;
-}
-
-header nav {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  position: absolute;
-  right: 15%;
-  top: 16%;
-}
-
-header nav ul {
-  text-align: right;
-}
-
-header nav ul li {
-  color: #6D4190;
-  font-size: 5rem;
-  margin-bottom: 50px;
-}
-
-header nav ul li a {
-  color: #6D4190;
-  border-bottom: 5px solid #480F7C;
-  padding-bottom: 0;
-  -webkit-transition: 0.35s all ease;
-  transition: 0.35s all ease;
-}
-
-header nav ul li a:hover, header nav ul li a:focus {
-  padding-bottom: 10px;
-  font-size: 7rem;
-  border-bottom: 15px solid #C73F75;
-}
-
-header nav ul li a:active {
-  color: #C73F75;
-  padding-bottom: 0px;
+header .headerContent .toContent a:hover p {
+  font-size: 3.5rem;
+  text-shadow: 4px 0px #01ed6e;
 }
